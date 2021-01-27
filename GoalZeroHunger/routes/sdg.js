@@ -2,21 +2,20 @@
 var express = require('express');
 var router = express.Router();
 const MongoClient = require('mongodb').MongoClient; 
-const uri = ''
+const uri = 'mongodb+srv://ricardorodriguez:Rcy_kj0_p@nraboy-sample.bf8zs.mongodb.net/nraboysample?retryWrites=true&w=majority'
 
-/*
-router.get('/list/:num', function (req, res, next) {
+//per la collections cereal_yield
+router.get('/cereal', function (req, res, next) {
 
     console.log(req.params);
-    let num = parseInt(req.params.num);
     const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
-    client.connect(getListMovies);  
+    client.connect(getListCereal);  
 
-    function getListMovies(err) {
+    function getListCereal(err) {
         if (err) console.log("Conessione al db non riuscita");
         else {
-            const collection = client.db("sample_mflix").collection("movies");
-            collection.find().limit(num).toArray(callBackQuery);
+            const collection = client.db("WORLD_DATA_BANK_ZEROHUNGER").collection("cereal_yield");
+            collection.find().limit(10).toArray(callBackQuery);
         }
     } 
 
@@ -27,5 +26,5 @@ router.get('/list/:num', function (req, res, next) {
     }
     
 });
-*/
+
 module.exports = router;
