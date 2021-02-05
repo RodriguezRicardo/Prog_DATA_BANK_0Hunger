@@ -5,11 +5,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RelazioneComponent } from './relazione/relazione.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CerealComponent } from './cereal/cereal.component';
+import { FoodComponent } from './food/food.component';
+import { UndernourishmentComponent } from './undernourishment/undernourishment.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RelazioneComponent
+    RelazioneComponent,
+    CerealComponent,
+    FoodComponent,
+    UndernourishmentComponent
   ],
   imports: [
     BrowserModule,
