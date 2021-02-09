@@ -8,6 +8,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CerealComponent } from './cereal/cereal.component';
 import { FoodComponent } from './food/food.component';
 import { UndernourishmentComponent } from './undernourishment/undernourishment.component';
+import { GoogleChartsModule } from 'angular-google-charts';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { UndernourishmentComponent } from './undernourishment/undernourishment.c
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    GoogleChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
