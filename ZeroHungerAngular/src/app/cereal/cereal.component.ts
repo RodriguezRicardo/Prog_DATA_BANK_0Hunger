@@ -8,14 +8,15 @@ import { Observable } from 'rxjs';
   styleUrls: ['./cereal.component.css']
 })
 export class CerealComponent implements OnInit {
-  obsG : Observable<Object>;
+  obsG_Cereal : Observable<Object>;
   res : any;
 
-  constructor(public goal2 : Goal2Service) { }
+  constructor(public goal2 : Goal2Service) {
+    this.obsG_Cereal = this.goal2.visualCereal();
+    this.obsG_Cereal.subscribe((data) => { this.res = data; console.log(this.res) });
+  }
 
   ngOnInit(): void {
-    this.obsG = this.goal2.visualCereal();
-    this.obsG.subscribe((data) => { this.res = data; console.log(this.res) });
   }
 
 }
